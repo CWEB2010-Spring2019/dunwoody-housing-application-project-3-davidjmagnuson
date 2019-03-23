@@ -5,8 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_Three_GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Name="mainWindow" Title="Dunwoody Housing App" Height="450" Width="800">
     <Grid>
-        
+        <TabControl>
+            <TabItem Name="Residents" Header="Residents" Height="30" Width="150">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </TabItem>
+            <TabItem Name="addResident" Header="Add Resident" Height="30" Width="150">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" FontSize="20" Content="New Resident"/>
+                    <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" FontSize="15" Content="first name:" Margin="5"/>
+                    <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" FontSize="15" Content="last name:" Margin="5"/>
+                    <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" FontSize="15" Content="id number:" Margin="5"/>
+                    <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" FontSize="15" Content="room #:" Margin="5"/>
+                    <Label Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" FontSize="15" Content="floor #:" Margin="5"/>
+                    <Label Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" FontSize="15" Content="type:" Margin="5"/>
+                    <Label Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" FontSize="15" Content="hrs worked:" Margin="5"/>
+                    <TextBox Name="fName" Grid.Row="1" Grid.Column="1" Height="23" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text=""/>
+                    <TextBox Name="lName" Grid.Row="2" Grid.Column="1" Height="23" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text=""/>
+                    <TextBox Name="idNumber" Grid.Row="3" Grid.Column="1" Height="23" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text=""/>
+                    <TextBox Name="roomNumber" Grid.Row="4" Grid.Column="1" Height="23" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text=""/>
+                    <TextBox Name="floorNumber" Grid.Row="5" Grid.Column="1" Height="23" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text=""/>
+                    <TextBox Name="hrsWorked" Grid.Row="7" Grid.Column="1" Height="23" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text=""/>
+                    <ComboBox Grid.Row="6" Grid.Column="1" Height="30" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <ComboBoxItem Content="scholarship"/>
+                        <ComboBoxItem Content="athlete"/>
+                        <ComboBoxItem Content="student worker"/>
+                    </ComboBox>
+                    <Button Name="newResBtn" Grid.Row="8" Grid.Column="1" Content="add" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Margin="20" Click="NewResBtn_Click" />
+
+
+
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Name="search" Header="Search Residents" Height="30" Width="150">
+
+
+            </TabItem>
+        </TabControl>
+
+
     </Grid>
 </Window>
